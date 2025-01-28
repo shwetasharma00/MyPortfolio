@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRAPHIC DESGINER</title>
+    
+    <style>
+         body {
+            margin: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: #2c3e50;
+            color: #000000;
+            ;
+        }
+
+        .skills-section {
+            margin-bottom: 100px;
+            max-width: 700px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .skills-section h2 {
+            text-align: center;
+            color: #090404;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+        }
+
+        .skills-list {
+            margin: 20px 0;
+        }
+
+        .skill-item {
+            margin-bottom: 15px;}
+            .progress-bar {
+            height: 8px;
+            background: #ffffff;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-bar span {
+            display: block;
+            height: 100%;
+            background: #f8a600;
+            border-radius: 4px;
+        }
+
+        .image-container {
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+        }
+
+
+        
+            /* Container for the gallery */
+.gallery {
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Each individual poster */
+.poster {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin: 10px;
+}
+
+/* Style for the image */
+.poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* On hover, the image slightly enlarges */
+.poster:hover img {
+    transform: scale(1.1);
+}
+
+/* Description that shows when you hover over the poster */
+.description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show the description when hovering over the poster */
+.poster:hover .description {
+    visibility: visible;
+    opacity: 1;
+}
+
+    </style>
+</head>
+<body>
+    <section class="section" id="skills">
+        <div class="skills-section">
+            <h2>GRAPHIC DESGINER</h2>
+            <div class="image-container">
+                <img src="https://gavstech.com/wp-content/uploads/2024/04/banner-3-blog-it-trends.jpg" alt="Workstation Screenshot">
+            </div>
+            <div class="skills-list">
+                <div class="skill-item">
+                    <div class="skill-name">Typography</div>
+                    <div class="progress-bar"><span style="width: 80%;"></span></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Color Theor</div>
+                    <div class="progress-bar"><span style="width: 70%;"></span></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Logo Design</div>
+                    <div class="progress-bar"><span style="width: 75%;"></span></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Illustration</div>
+                    <div class="progress-bar"><span style="width: 55%;"></span></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">APP & Web Design</div>
+                    <div class="progress-bar"><span style="width: 55%;"></span></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Video Editing </div>
+                    <div class="progress-bar"><span style="width: 65%;"></span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="gallery">
+            
+            <div class="poster">
+                <img src="burger poster.png" alt="Poster 1">
+                <div class="description">Satisfy your hunger with our mouthwatering burgers, packed with flavor in every bite!
+                </div>
+            </div>
+            <div class="poster">
+                <img src="pizza poster.png" alt="Poster 2">
+                <div class="description">Indulge in cheesy perfection with our freshly baked, delicious pizzas.</div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="gallery">
+            
+            <div class="poster">
+                <img src="reception card.png" alt="Poster 1">
+                <div class="description">Make your special day unforgettable with a beautiful reception poster designed just for you.</div>
+            </div>
+            <div class="poster">
+                <img src="WEEDING CARD.png" alt="Poster 2">
+                <div class="description">Celebrate love and new beginnings with our elegant wedding posters.</div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="gallery">
+            
+            <div class="poster">
+                <img src="sprite advertisment.png" alt="Poster 1">
+                <div class="description">Refresh yourself with the iconic taste of Sprite, the drink that brings you back to life.</div>
+            </div>
+            <div class="poster">
+                <img src="goat (5).png" alt="Poster 2">
+                <div class="description">A tribute to the cricket legend Virat Kohli, showcasing his powerful gameplay.</div>
+            </div>
+        </div>
+    </section>
+
+
+
+</body>
+</html>

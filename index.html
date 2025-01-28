@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    
+</head>
+<body>
+<header>
+    <h2>Portfolio</h2>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero animate-on-scroll">
+    <div class="hero-text">
+      <h1>Hello, I'm Shweta Sharma</h1>
+      <p>a passionate web developer and graphic designer dedicated to creating visually appealing, functional, and user-friendly digital experiences.</p>
+      <div class="hero-buttons">
+        <a href="shweta resume.pdf" class="cta">VIEW CV</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="PORTFOLIO (1).png" alt="Hero Image">
+    </div>
+</section>
+
+<section class="about animate-on-scroll" id="about">
+    <div class="container">
+       <div class="about-me">
+        <img src="PORTFOLIO (1).png" alt="Profile Picture">
+        <div class="about-me-content">
+            <h1>About Me</h1>
+            <p>Hi, I’m Shweta Sharma, a Self-Taught Web Developer and Graphic Designer.
+                <br><br>I specialize in crafting intuitive, responsive, and visually appealing websites that deliver seamless user experiences.
+                <br><br>With expertise in UI/UX design, I combine creativity with technical skills to bring ideas to life.
+            </p>
+            <a href="shweta resume.pdf">
+                <button class="btn">VIEW CV</button>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="slider-container">
+        <div class="slider">
+          <div class="slide slide1">
+            <img src="close-up-image-programer-working-his-desk-office.jpg" alt="Image 1">
+            <div class="content">
+              <h2>WEB DEVELOPER</h2>
+              <p>Hi, I’m Shweta sharma, a web developer who loves transforming ideas into interactive and user-friendly digital experiences.</p>
+              <a href="web-designer.html" class="view-more-btn">View More</a>
+            </div>
+          </div>
+          <div class="slide slide2">
+            <img src="design-creative-inspiration-art-style-concept.jpg" alt="Image 2">
+            <div class="content">
+              <h2>GRAPHIC DESGINER</h2>
+              <p>Hello, I’m Shweta sharma, a graphic designer with a passion for crafting visually engaging designs that tell a story. </p>
+              <a href="graphic.html" class="view-more-btn">View More</a>
+            </div>
+          </div>
+
+          </section>
+<section class="contact-form animate-on-scroll" id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/xkgnarzo" method="post">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Contact Information</h4>
+            <p>Email: simplyshweta00@gmail.com</p>
+            
+        </div>
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                
+                
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Me</h4>
+            <div class="social-links">
+                <a href="#"><img src="linkedin.png" alt="LinkedIn"></a>
+                <a href="#"><img src="github.png" alt="GitHub"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Shweta Sharma. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+// Function to add the animation class when an element is in view
+function handleScrollAnimation(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Add the animation class when the element is in view
+            entry.target.classList.add('animate');
+            observer.unobserve(entry.target); // Stop observing once the animation is triggered
+        }
+    });
+}
+
+// Create an IntersectionObserver instance with the callback function
+const observer = new IntersectionObserver(handleScrollAnimation, {
+    threshold: 0.5 // Trigger when 50% of the element is in view
+});
+
+// Target elements that should be animated on scroll
+const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+
+// Observe each element
+elementsToAnimate.forEach(element => {
+    observer.observe(element);
+});
+
+// Slide animation for the slider
+let slides = document.querySelectorAll(".slide");
+let currentIndex = 0;
+
+function changeSlide() {
+    // Fade out the current slide
+    slides[currentIndex].style.opacity = 0;
+
+    // Move to the next slide
+    currentIndex = (currentIndex + 1) % slides.length;
+
+    // Fade in the next slide
+    slides[currentIndex].style.opacity = 1;
+}
+
+// Set an interval to change the slide every 3 seconds
+setInterval(changeSlide, 3000);
+
+// Initialize the first slide as visible
+slides[0].style.opacity = 1;
+</script>
+</body>
+</html>
